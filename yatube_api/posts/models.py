@@ -53,6 +53,9 @@ class Post(models.Model):
     def __str__(self):
         return self.text[0:15]
 
+    class Meta:
+        ordering = ('id',)
+
 
 class Comment(models.Model):
     author = models.ForeignKey(
